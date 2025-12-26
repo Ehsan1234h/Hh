@@ -1,24 +1,63 @@
-/* Note :- Make sure to run this code on the VS code live server
-		OR any other server . because, it uses some library which not 
-		load on local port or server */
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0px;
+}
 
-* {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-/*       background: black; */
-/*       text-align: center; */
-      outline: none;
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+
+    background-repeat: no-repeat;
+    color: #FFF;
+}
+
+.vline {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    height: 50vh;
+    width: 2px;
+    background-color: #d0d0d0;
+    z-index: -1;
+    opacity: 0.5;
+    visibility: hidden;
+}
+
+.gsapWrapper {
+    visibility: hidden;
+#wBody {
+
+    position: relative;
+    aspect-ratio: 1/1;
+
+    @media (orientation: landscape) {
+        width: 65vh;
     }
 
+    @media (orientation: portrait) {
+        height: 65vw;
+    }
 
+    #watch {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 1/1;
+        overflow: visible;
 
-#world {
-  width: 100%;
-  height: 100vh;
-	background: black;
-}
-canvas {
-	left: calc(50% - 325px);
-  position: absolute;
+    svg {
+        overflow: visible;
+        width: 100%;
+        height: 100%;
+     }
+    }
+    }
 }
